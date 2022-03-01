@@ -24,9 +24,62 @@ flightStatus.innerText = "The shuttle has landed.";
 
 let shuttleFlightScreen = document.getElementById("shuttleBackground");
 shuttleFlightScreen.setAttribute("style","background-color: #009933");
- 
+
+ let shuttleHeight = document.getElementById("spaceShuttleHeight");
+ shuttleHeight.innerText = "0";
 
  });
+
+ let abortMissionBtn = document.getElementById("missionAbort");
+ abortMissionBtn.addEventListener('click',function(){
+  // window.confirm()
+let shouldAbortMission = window.confirm("Confirm that you want to abort the mission.");
+  if(shouldAbortMission){
+
+  }
+
+
+let flightStatus = document.getElementById("flightStatus");
+    flightStatus.innerText = "Mission aborted.";
+    
+    let shuttleFlightScreen = document.getElementById("shuttleBackground");
+shuttleFlightScreen.setAttribute("style","background-color: #009933");
+
+let shuttleHeight = document.getElementById("spaceShuttleHeight");
+ shuttleHeight.innerText = "0";
+
+
+ });
+ let rocketImg = this.document.getElementById("rocket");
+ let top = 0;
+ let bottom = 0;
+ let left = 0;
+ let right = 0; 
+ 
+ let upBtn = document.getElementById("up");
+  upBtn.addEventListener('click',function(){
+    let shuttleHeight = document.getElementById("spaceShuttleHeight");
+   // shuttleHeight.innerText = "0";
+    let shuttleHeightAmount = Number(shuttleHeight.innerText);
+    shuttleHeightAmount += 10000; 
+    shuttleHeight.innerText = shuttleHeightAmount;
+
+
+  });
+  let downBtn = document.getElementById("down");
+  downBtn.addEventListener('click',function(){
+    let shuttleHeight = document.getElementById("spaceShuttleHeight");
+   // shuttleHeight.innerText = "0";
+    let shuttleHeightAmount = Number(shuttleHeight.innerText);
+    shuttleHeightAmount -= 10000; 
+    shuttleHeight.innerText = shuttleHeightAmount;
+    //bottom += 10;
+    left += 10;
+   // document.getElementById("rocket").style.top = (top - 10) + "px";
+   document.getElementById("rocket").style.left = (left - 10) + "px";
+
+  });
+
 
 
 });
