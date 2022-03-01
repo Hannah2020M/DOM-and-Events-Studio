@@ -8,8 +8,25 @@ let isReadyToLaunch = window.confirm("Confirm that the shuttle is ready for take
     let flightStatus = document.getElementById("flightStatus");
     flightStatus.innerText = "Shuttle in flight.";
     let shuttleFlightScreen = document.getElementById("ShuttleBackground");
-    shuttleFlightScreen.setAttribute("style","background-color: #009933");
-}
+    shuttleFlightScreen.setAttribute("style","background-color: #0000ff");
+    
+    let shuttleHeight = document.getElementById("spaceShuttleHeight");
+    shuttleHeight.innerText = "10000";
+  }
 });
+
+ let landingBtn = document.getElementById("landing");
+ landingBtn.addEventListener('click',function(){
+ window.alert("The shuttle is landing. Landing gear engaged.");
+
+let flightStatus = document.getElementById("flightStatus");
+flightStatus.innerText = "The shuttle has landed.";
+
+let shuttleFlightScreen = document.getElementById("shuttleBackground");
+shuttleFlightScreen.setAttribute("style","background-color: #009933");
+ 
+
+ });
+
 
 });
