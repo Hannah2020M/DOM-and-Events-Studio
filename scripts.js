@@ -55,19 +55,26 @@ let shuttleHeight = document.getElementById("spaceShuttleHeight");
  let bottom = 0;
  let left = 0;
  let right = 0; 
+
+
+ let leftBtn = document.getElementById("up");
+  leftBtn.addEventListener('click',function(){
+   left -= 10;
+   document.getElementById("rocket").style.left = (left - 10) + "px";
  
- let upBtn = document.getElementById("up");
-  upBtn.addEventListener('click',function(){
-    let shuttleHeight = document.getElementById("spaceShuttleHeight");
-   // shuttleHeight.innerText = "0";
-    let shuttleHeightAmount = Number(shuttleHeight.innerText);
-    shuttleHeightAmount += 10000; 
-    shuttleHeight.innerText = shuttleHeightAmount;
+//  let upBtn = document.getElementById("up");
+//   upBtn.addEventListener('click',function(){
+//     let shuttleHeight = document.getElementById("spaceShuttleHeight");
+//    // shuttleHeight.innerText = "0";
+//     let shuttleHeightAmount = Number(shuttleHeight.innerText);
+//     shuttleHeightAmount += 10000; 
+//     shuttleHeight.innerText = shuttleHeightAmount;
 
 
   });
-  let downBtn = document.getElementById("down");
-  downBtn.addEventListener('click',function(){
+
+  let rightBtn = document.getElementById("down");
+  rightBtn.addEventListener('click',function(){
     let shuttleHeight = document.getElementById("spaceShuttleHeight");
    // shuttleHeight.innerText = "0";
     let shuttleHeightAmount = Number(shuttleHeight.innerText);
@@ -77,6 +84,21 @@ let shuttleHeight = document.getElementById("spaceShuttleHeight");
     left += 10;
    // document.getElementById("rocket").style.top = (top - 10) + "px";
    document.getElementById("rocket").style.left = (left - 10) + "px";
+
+
+
+
+//   let downBtn = document.getElementById("down");
+//   downBtn.addEventListener('click',function(){
+//     let shuttleHeight = document.getElementById("spaceShuttleHeight");
+//    // shuttleHeight.innerText = "0";
+//     let shuttleHeightAmount = Number(shuttleHeight.innerText);
+//     shuttleHeightAmount -= 10000; 
+//     shuttleHeight.innerText = shuttleHeightAmount;
+//     //bottom += 10;
+//     left += 10;
+//    // document.getElementById("rocket").style.top = (top - 10) + "px";
+//    document.getElementById("rocket").style.left = (left - 10) + "px";
 
   });
 
